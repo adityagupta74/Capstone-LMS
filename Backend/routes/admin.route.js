@@ -9,8 +9,6 @@ router.post("/admin-login",function(req,res){
 })
 
 
-
-
 router.post("/add-student", async (req, res) => {
   try {
     const {
