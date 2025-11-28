@@ -59,7 +59,7 @@ export default function UniversitySection() {
           </p>
 
           <h1 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
-            Welcome to Edura University.
+            Welcome to Vaishnavi Commerce Classes.
           </h1>
 
           <p className="text-gray-600 leading-relaxed mb-4">

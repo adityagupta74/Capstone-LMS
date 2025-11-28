@@ -14,10 +14,13 @@ const Navbar = () => {
         <div className="flex justify-between bg-blue-700 text-white px-4 md:px-6 py-2 text-xs md:text-sm">
           {/* Left */}
           <div className="flex gap-3 md:gap-6 items-center">
-            <p>📞 8097396033</p>
-            <p className="hidden sm:block">📧 email-aditya@gmail.com</p>
+            <p>📞 9920945143</p>
+            <p className="hidden sm:block">
+              📧 email-vaishnavicommerclasses1@gmail.com
+            </p>
             <p className="hidden lg:block">🕒 Mon - Sat 8:00 - 10:00</p>
           </div>
+         
 
           {/* Right */}
           <div className="flex gap-3 items-center">

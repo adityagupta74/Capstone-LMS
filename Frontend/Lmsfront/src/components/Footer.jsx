@@ -1,25 +1,31 @@
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaSkype } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaYoutube,
+  FaSkype,
+} from "react-icons/fa";
+import { Link } from "react-router";
 
 export default function Footer() {
   return (
     <footer className="bg-[#0b1d33] text-gray-300 py-16">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
-
         {/* Logo + Description */}
         <div>
-          <h2 className="text-3xl font-bold flex items-center gap-2">
-            🎓 EDURA
-          </h2>
+          <h2 className="text-3xl font-bold flex items-center gap-2">🎓 VCC</h2>
           <p className="mt-4 leading-relaxed">
-            Continually optimize backward manufactured products whereas communities
-            negotiate life compelling alignments.
+            Continually optimize backward manufactured products whereas
+            communities negotiate life compelling alignments.
           </p>
 
           {/* Social Icons */}
           <h3 className="mt-6 mb-3 font-semibold">FOLLOW US ON:</h3>
           <div className="flex items-center gap-4 text-lg">
             <FaFacebookF className="hover:text-white cursor-pointer" />
-            <FaTwitter className="hover:text-white cursor-pointer" />
+            <Link to="https://www.instagram.com/vaishnavicommerceclasses1?igsh=ZXVlYnp5ZTkzdmJu">
+              <FaTwitter className="hover:text-white cursor-pointer" />
+            </Link>{" "}
             <FaLinkedinIn className="hover:text-white cursor-pointer" />
             <FaYoutube className="hover:text-white cursor-pointer" />
             <FaSkype className="hover:text-white cursor-pointer" />
@@ -76,10 +82,15 @@ export default function Footer() {
 
       {/* Bottom Footer */}
       <div className="border-t border-white/10 mt-12 pt-6 text-center text-sm text-gray-400">
-        Copyright © 2023 <span className="text-blue-500">Edura</span> All Rights Reserved.
+        Copyright © 2025 <span className="text-blue-500">VCC</span> All Rights
+        Reserved.
         <div className="mt-2 space-x-4">
-          <a href="#" className="hover:text-white">Privacy Policy</a>
-          <a href="#" className="hover:text-white">Terms & Conditions</a>
+          <a href="#" className="hover:text-white">
+            Privacy Policy
+          </a>
+          <a href="#" className="hover:text-white">
+            Terms & Conditions
+          </a>
         </div>
       </div>
     </footer>

@@ -41,7 +41,7 @@ const About = () => {
           </div>
 
           <img
-            src="/images/about1.jpg"
+            src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=800&q=60"
             alt="About us"
             className="rounded-2xl shadow-lg"
           />
@@ -52,7 +52,7 @@ const About = () => {
       <section className="py-16 px-6 md:px-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <img
-            src="/images/about2.jpg"
+            src="https://images.unsplash.com/photo-1584697964190-1b40e9a9e45b?auto=format&fit=crop&w=800&q=60"
             alt="Our mission"
             className="rounded-2xl shadow-lg"
           />

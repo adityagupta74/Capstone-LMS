@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
 const stats = [
-  { value: 3.9, suffix: "k+", label1: "Successfully", label2: "Trained" },
-  { value: 15.8, suffix: "k+", label1: "Classes", label2: "Completed" },
-  { value: 97.5, suffix: "k+", label1: "Satisfaction", label2: "Rate" },
-  { value: 100.2, suffix: "k+", label1: "Students", label2: "Community" },
+  { value: 3, suffix: "k+", label1: "Successfully", label2: "Trained" },
+  { value: 15, suffix: "+", label1: "Classes", label2: "Completed" },
+  { value: 97.5, suffix: "+", label1: "Satisfaction", label2: "Rate" },
+  { value: 100, suffix: "+", label1: "Students", label2: "Community" },
 ];
 
 export default function StatsSection() {

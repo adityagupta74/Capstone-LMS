@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import StudentSidebar from "./StudentSidebar";
 
 const Assignments = () => {
-  const [assignments, setAssignments] = useState([]);
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    axios.get("http://localhost:4000/student/assignments", {
-      headers: { Authorization: `Bearer ${token}` }
-    })
-    .then(res => setAssignments(res.data))
-    .catch(err => console.log(err));
-  }, []);
+  const assignments = [
+    {
+      _id: 1,
+      title: "Math Assignment 1",
+      description: "Complete the exercises on page 42-45.",
+      class: "TY B.Sc IT",
+    },
+    {
+      _id: 2,
+      title: "Programming Assignment",
+      description: "Create a CRUD app using MERN Stack.",
+      class: "TY B.Sc IT",
+    },
+  ];
 
   return (
     <div className="flex">
@@ -22,11 +24,11 @@ const Assignments = () => {
       <div className="flex-1 p-10">
         <h1 className="text-3xl font-bold mb-5">Assignments</h1>
 
-        {assignments.map(a => (
+        {assignments.map((a) => (
           <div className="bg-white p-4 rounded shadow mb-3" key={a._id}>
             <h3 className="font-bold text-xl">{a.title}</h3>
-            <p>{a.description}</p>
-            <small>Class: {a.class}</small>
+            <p className="text-gray-700">{a.description}</p>
+            <small className="text-sm text-gray-500">Class: {a.class}</small>
           </div>
         ))}
       </div>

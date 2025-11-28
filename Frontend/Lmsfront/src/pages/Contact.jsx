@@ -12,10 +12,10 @@ const Contact = () => {
 
       {/* HERO SECTION */}
       <section className="bg-blue-600 text-white py-20 px-4 text-center">
-        <h1 className="text-5xl font-bold mb-4">Get In Touch</h1>
+        <h1 className="text-5xl font-bold mb-4">Contact VCC</h1>
         <p className="max-w-3xl mx-auto text-lg opacity-90">
-          Whether you have questions about our courses, admissions, or timings —
-          we are always here to guide and support you.
+          Reach out to Vaishnavi Commerce Classes (VCC) for admissions, course
+          details, or any other queries.
         </p>
       </section>
 
@@ -31,8 +31,10 @@ const Contact = () => {
             <div>
               <h2 className="text-3xl font-semibold mb-2">Our Address</h2>
               <p className="text-gray-700 leading-relaxed">
-                Bhandup Station Plaza, Near Bagicha Hotel, Mumbai, Maharashtra,
-                India – 400078
+                Vaishnavi Commerce Classes (VCC), Shyam Smruti, Bus Stop 27,
+                Kamla Nehru Nagar, Next to Bhandup Gaon, Saidham Society, Kirti
+                Nagar, Friends Colony, Bhandup East, Mumbai, Maharashtra –
+                400042
               </p>
             </div>
           </div>
@@ -44,7 +46,7 @@ const Contact = () => {
             </div>
             <div>
               <h2 className="text-3xl font-semibold mb-2">Phone</h2>
-              <p className="text-gray-700">+91 8097396033</p>
+              <p className="text-gray-700">+91 9920945143</p>
               <p className="text-gray-500 text-sm">(Available 9 AM – 9 PM)</p>
             </div>
           </div>
@@ -56,7 +58,7 @@ const Contact = () => {
             </div>
             <div>
               <h2 className="text-3xl font-semibold mb-2">Email</h2>
-              <p className="text-gray-700">preranaclasses@gmail.com</p>
+              <p className="text-gray-700">vccclasses@gmail.com</p>
               <p className="text-gray-500 text-sm">
                 (We reply within 24 hours)
               </p>
@@ -75,7 +77,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Safety Note */}
+          {/* Safety */}
           <div className="flex items-start gap-5">
             <div className="text-4xl text-purple-600">
               <FaUserShield />
@@ -83,14 +85,13 @@ const Contact = () => {
             <div>
               <h2 className="text-3xl font-semibold mb-2">Student Support</h2>
               <p className="text-gray-700">
-                We ensure secure communication and your details remain private
-                with us.
+                Your information is kept secure and private with us.
               </p>
             </div>
           </div>
         </div>
 
-        {/* RIGHT SIDE – FORM */}
+        {/* RIGHT SIDE FORM */}
         <div className="w-full max-w-md shadow-xl p-10 rounded-2xl bg-white border border-gray-200">
           <h2 className="text-3xl font-semibold mb-6">Send Us a Message</h2>
 
@@ -125,49 +126,16 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* HIGHLIGHTS SECTION */}
-      <section className="py-16 bg-white px-6">
-        <h2 className="text-center text-3xl font-bold mb-12">
-          Why Contact Us?
-        </h2>
-
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="p-8 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold mb-2">Quick Response</h3>
-            <p className="text-gray-600">
-              Our team ensures that your queries are resolved at the earliest.
-            </p>
-          </div>
-
-          <div className="p-8 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold mb-2">
-              Student Friendly Team
-            </h3>
-            <p className="text-gray-600">
-              We guide you at every step for admissions or course-related
-              queries.
-            </p>
-          </div>
-
-          <div className="p-8 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold mb-2">Professional Support</h3>
-            <p className="text-gray-600">
-              Every message is handled by trained and experienced staff.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* GOOGLE MAP SECTION */}
+      {/* GOOGLE MAP */}
       <section className="mt-10">
         <iframe
-          title="Google Map"
+          title="Google Map – VCC Bhandup East"
           className="w-full h-80"
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.632164280991!2d72.934551!3d19.151001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b8f3f3ae7a61%3A0xe59b764d56c7c88a!2sBhandup%20Station%20Plaza!5e0!3m2!1sen!2sin!4v1700000000000"
-        ></iframe>
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.5900894098734!2d72.94288627534955!3d19.15301538206057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b8eadc4ee1bb%3A0xf4b6b7d2a56f60d1!2sShyam%20Smruti%20Building%2C%20Kamla%20Nehru%20Nagar%2C%20Bhandup%20East%2C%20Mumbai%2C%20Maharashtra%20400042!5e0!3m2!1sen!2sin!4v1731781230000"
+        />
       </section>
 
       <Footer />

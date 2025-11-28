@@ -4,25 +4,13 @@ import Navbar from "../components/Navbar";
 const Gallery = () => {
   const galleryData = [
     {
-      title: "Picnic",
+      title: "Classroom",
       images: [
-        "https://preranaclasses.in/wp-content/uploads/2025/06/prerna-classes.jpg",
-        "https://preranaclasses.in/wp-content/uploads/2025/06/prerna-classes.jpg",
-      ],
-    },
-    {
-      title: "Annual Day",
-      images: [
-        "https://preranaclasses.in/wp-content/uploads/2025/06/prerna-classes.jpg",
-        "https://preranaclasses.in/wp-content/uploads/2025/06/prerna-classes.jpg",
-        "https://preranaclasses.in/wp-content/uploads/2025/06/prerna-classes.jpg",
-      ],
-    },
-    {
-      title: "Waterpark",
-      images: [
-        "https://preranaclasses.in/wp-content/uploads/2025/06/prerna-classes.jpg",
-        "https://preranaclasses.in/wp-content/uploads/2025/06/prerna-classes.jpg",
+        "/images/img1.jpg",
+        "/images/img2.jpg",
+        "/images/img3.jpg",
+        "/images/img4.jpg",
+        "/images/img5.jpg",
       ],
     },
   ];
@@ -36,7 +24,7 @@ const Gallery = () => {
 
         {galleryData.map((section, index) => (
           <div key={index} className="mb-12">
-            {/* Category Title */}
+            {/* Section Title */}
             <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
 
             {/* Images Grid */}
