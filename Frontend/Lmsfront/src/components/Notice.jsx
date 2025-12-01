@@ -22,7 +22,7 @@ const Notice = () => {
         {notices.map((n) => (
           <div className="bg-white shadow p-4 rounded mb-3" key={n._id}>
             <h2 className="text-xl font-bold">{n.title}</h2>
-            <p>{n.content}</p>
+            <p>{n.description}</p>
             <small>{n.date}</small>
           </div>
         ))}

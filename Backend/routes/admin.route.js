@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require("bcryptjs");
 const StudentModel = require("../models/student.model");
 const AssignmentModel = require("../models/assignment.model");
+const NoticeModel = require("../models/notice.model");
 
 router.post("/admin-login",function(req,res){
     const {username,password}=req.body;
