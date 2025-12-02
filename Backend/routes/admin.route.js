@@ -67,11 +67,14 @@ router.post("/add-student", async (req, res) => {
       .json({ message: "Error adding student", error: error.message });
   }
 });
+
 router.get("/assignments", async function (req, res) {
   const assignments = await AssignmentModel.find();
   res.json(assignments);
 });
+
 router.delete("/delete-assignment", function (req, res) {});
+
 router.post("/add-assignment", async function (req, res) {
   const { title, description, classstd, duedate } = req.body;
   if (!title || !description || !classstd || !duedate) {
@@ -92,10 +95,12 @@ router.post("/add-assignment", async function (req, res) {
     assignment: newAssignment,
   });
 });
+
 router.get("/notices", async function (req, res) {
   const notice = await NoticeModel.find();
   res.json(notice);
 });
+
 router.post("/add-notice", function (req, res) {
   const { title, content, description, date } = req.body;
   if (!title || !content || !description || !date) {
@@ -113,6 +118,7 @@ router.post("/add-notice", function (req, res) {
     .json({ message: "Notice created successfully", notice: newNotice });
 });
 const FeesModel = require("../models/fees.model");
+
 router.post("/fees", async (req, res) => {
   try {
     const { studentId, classstd, totalAmount } = req.body;
@@ -134,6 +140,7 @@ router.post("/fees", async (req, res) => {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 });
+
 router.put("/fees/:id/pay", async (req, res) => {
   try {
     const { id } = req.params;

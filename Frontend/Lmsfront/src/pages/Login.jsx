@@ -1,13 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate(); // ← important
-
+  const token = localStorage.getItem("token");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  useEffect(() => {
+    async function checkLoginStatus() {
+      if(token) {
+        try {
+          await axios.get("http://localhost:3000/student/me", {
+            headers : {
+              authorization : "Bearer " + token
+            }
+          });
+          navigate("/dashboard");
+        }catch(error) {
+          console.log("Error in login while verifying user token")
+        }
+      }
+    }
+
+    checkLoginStatus();
+  }, [])
   const handleLogin = async () => {
     try {
       const res = await axios.post("http://localhost:3000/student/login", {

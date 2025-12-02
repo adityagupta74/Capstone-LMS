@@ -31,7 +31,7 @@ router.post("/login", async function (req, res) {
       return res.status(401).json({ message: "Invalid username or password" });
     }
 
-    const token = jwt.sign({ id: student._id, role: "student" }, JWT_SECRET, {
+    const token = jwt.sign({ id: student._id, username : student.username, firstname: student.firstname, lastname : student.lastname, role: "student" }, JWT_SECRET, {
       expiresIn: "1d",
     });
 
@@ -92,6 +92,7 @@ router.get("/fees", verifystudent, async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "uploads/");
@@ -132,4 +133,14 @@ router.post(
   }
 );
 
+=======
+
+router.get("/me", verifystudent, async(req, res) => {
+  console.log(req.student)
+  return res.json({
+    message : "Valid user!",
+    username: req.student.username
+  })
+});
+>>>>>>> f251e86 (some fixes backend and frontend too)
 module.exports = router;

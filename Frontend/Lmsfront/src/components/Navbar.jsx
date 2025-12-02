@@ -47,7 +47,7 @@ const Navbar = () => {
               alt="Logo"
             />
             <h1 className="text-xl md:text-3xl font-bold text-blue-900">
-              Vaishnavi Commerce Classes
+              EduSync
             </h1>
           </div>
 

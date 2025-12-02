@@ -1,15 +1,11 @@
 import React from "react";
 import StudentSidebar from "../components/StudentSidebar";
 import AttendanceChart from "../components/AttendanceChart";
+import { jwtDecode } from "jwt-decode";
 
 const StudentDashboard = () => {
-  const student = {
-    name: "Aditya Gupta",
-    class: "TY B.Sc IT",
-    rollNo: "6440",
-    email: "aditya@example.com",
-  };
-
+  const student = jwt.decode(localStorage.getItem("token"));
+  console.log(student)
   const today = new Date();
   const currentDay = today.getDate();
   const currentMonth = today.toLocaleString("default", { month: "long" });
