@@ -20,6 +20,7 @@ const attendanceRoute = require("./routes/attendance.route");
 app.use("/admin", adminRoute);
 app.use("/student", studentRoute);
 app.use("/attendance", attendanceRoute);
+app.use("/uploads", express.static("uploads/submissions"));
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

@@ -10,18 +10,17 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post("http://localhost:4000/student/login", {
+      const res = await axios.post("http://localhost:3000/student/login", {
         username,
         password,
       });
-
-      localStorage.setItem("token", res.data.token);
+      -localStorage.setItem("token", res.data.token);
+      +localStorage.setItem("studentToken", res.data.token);
 
       alert("Login Successful!");
 
       // 👉 Redirect user to Dashboard
       navigate("/dashboard");
-
     } catch (err) {
       alert(err.response?.data?.message || "Login failed");
     }
@@ -30,7 +29,6 @@ const Login = () => {
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-xl shadow-lg w-[30%] flex flex-col gap-4">
-
         <h1 className="text-3xl font-bold text-center text-blue-600">Login</h1>
 
         <input
@@ -55,7 +53,6 @@ const Login = () => {
         >
           Login
         </button>
-
       </div>
     </div>
   );

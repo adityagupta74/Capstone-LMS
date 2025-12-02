@@ -6,6 +6,10 @@ const Student = require("../models/student.model");
 const AssignmentModel = require("../models/assignment.model");
 const verifystudent = require("../middleware/auth.middleware");
 const JWT_SECRET = "Aditya";
+const SubmissionModel = require("../models/submission.model");
+
+const multer = require("multer");
+const path = require("path");
 
 router.post("/login", async function (req, res) {
   const { username, password } = req.body;
@@ -87,5 +91,45 @@ router.get("/fees", verifystudent, async (req, res) => {
     res.status(500).json({ message: "Server error", error: err.message });
   }
 });
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "uploads/");
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + path.extname(file.originalname));
+  },
+});
+
+const upload = multer({ storage });
+
+router.post(
+  "/submit-assignment/:id",
+  verifystudent,
+  upload.single("file"),
+  async (req, res) => {
+    try {
+      const { id } = req.params; // assignment id
+      const studentId = req.student.id;
+
+      if (!req.file) {
+        return res.status(400).json({ message: "File is required" });
+      }
+
+      // Correct fields according to schema
+      const submission = new SubmissionModel({
+        student: studentId,
+        assignment: id,
+        file: req.file.filename,
+      });
+
+      await submission.save();
+      res.json({ message: "Assignment Submitted Successfully" });
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ message: "Server Error" });
+    }
+  }
+);
 
 module.exports = router;
